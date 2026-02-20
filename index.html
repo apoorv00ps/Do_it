@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do It — Learn Anything</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">Do<span>.</span>It</div>
+            <div class="header-right">
+                <div class="header-stats" id="header-stats"></div>
+                <!-- Auth: sign-in button (shown when signed out) -->
+                <button id="auth-btn">Sign in with Google</button>
+                <!-- Auth: user info (shown when signed in) -->
+                <div id="user-info" style="display:none" class="user-info">
+                    <img id="user-avatar" class="user-avatar" src="" alt="avatar" />
+                    <span id="user-name" class="user-name"></span>
+                    <button id="signout-btn">sign out</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="hero-label">// structured learning</div>
+            <h1 class="hero-title">What do you want to<br><em>master</em> next?</h1>
+            <p class="hero-sub">Enter a topic. Get a complete roadmap — from zero to advanced. Track every step.</p>
+
+            <div class="input-row">
+                <input type="text" id="topic-input" placeholder="e.g. Rust programming, Machine Learning, Stoicism..."
+                    autocomplete="off" spellcheck="false" />
+                <button id="learn-btn">
+                    <span class="btn-inner" id="btn-inner">LEARN</span>
+                </button>
+            </div>
+
+            <div class="hero-error" id="hero-error"></div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects-section" style="display:none">
+            <div class="section-header">
+                <span class="section-title">// projects</span>
+                <span class="projects-count" id="projects-count"></span>
+            </div>
+            <div class="projects-list" id="projects-list"></div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>do.it &mdash; knowledge, structured. &mdash; 2026</footer>
+
+    </div>
+
+    <!-- CONFIRM DIALOG -->
+    <div id="confirm-overlay">
+        <div class="confirm-box">
+            <div class="confirm-title">Delete project?</div>
+            <div class="confirm-msg" id="confirm-msg">This cannot be undone.</div>
+            <div class="confirm-actions">
+                <button class="btn-ghost" id="confirm-cancel">Cancel</button>
+                <button class="btn-danger" id="confirm-ok">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <!-- APP (ES module so Firebase imports work) -->
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
