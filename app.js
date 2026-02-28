@@ -1,7 +1,7 @@
 // ═════════════════════════════════════════
 //  CONSTANTS  ← PUT YOUR KEY ON THE NEXT LINE
 // ═════════════════════════════════════════
-const API_KEY = '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'; // ← paste your Groq key here
+const API_KEY = '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'; // ← paste your Groq key here
 const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const AI_MODEL = 'llama-3.3-70b-versatile';
 const STORAGE_KEY = 'doit_projects_v1';
@@ -440,3 +440,4 @@ function showConfirm(title, msg, onOk) {
     confirmCallback = onOk;
     confirmOverlay.classList.add('show');
 }
+
