@@ -1,0 +1,6 @@
+# Secret config — NEVER commit this!
+config.js
+
+# OS junk
+.DS_Store
+Thumbs.db
