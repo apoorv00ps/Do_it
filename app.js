@@ -1,7 +1,8 @@
 // ═════════════════════════════════════════
 //  CONSTANTS  ← key is loaded from config.js (git-ignored)
 // ═════════════════════════════════════════
-const API_KEY = (typeof GROQ_API_KEY !== 'undefined') ? GROQ_API_KEY : 'YOUR_GROQ_KEY_HERE';
+const API_KEY = (typeof GROQ_API_KEY !== 'undefined') ? GROQ_API_KEY : 'YOUR_GROQ_KEY_HERE'
+
 const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const AI_MODEL = 'llama-3.3-70b-versatile';
 const STORAGE_KEY = 'doit_projects_v1';
