@@ -1,7 +1,7 @@
 // ═════════════════════════════════════════
-//  CONSTANTS  ← PUT YOUR KEY ON THE NEXT LINE
+//  CONSTANTS  ← key is loaded from config.js (git-ignored)
 // ═════════════════════════════════════════
-const API_KEY = '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'; // ← paste your Groq key here
+const API_KEY = (typeof GROQ_API_KEY !== 'undefined') ? GROQ_API_KEY : 'YOUR_GROQ_KEY_HERE';
 const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const AI_MODEL = 'llama-3.3-70b-versatile';
 const STORAGE_KEY = 'doit_projects_v1';
@@ -146,7 +146,8 @@ async function handleLearn() {
         return;
     }
     if (API_KEY === 'YOUR_GROQ_KEY_HERE') {
-        showError('No API key. Paste your Groq key in app.js line 4.');
+        showError('No API key. Open config.js and paste your Groq key there.');
+
         return;
     }
     hideError();
